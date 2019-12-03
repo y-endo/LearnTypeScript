@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // ECMAScriptのターゲットバージョンを指定します
+    "module": "esnext", // モジュールコード生成
+    "lib": ["esnext", "dom"], // コンパイルに含めるライブラリファイルを指定します。
+    "allowJs": true, // javascriptファイルをコンパイルできるようにします。
+    "sourceMap": true, // 対応する '.map'ファイルを生成します。
+    "incremental": true, // 差分ビルドの有効化
+    "noImplicitAny": true, // 暗黙のanyを許可しない
+    "strict": true, // すべての厳密な型チェックオプションを有効にします。
+    "allowSyntheticDefaultImports": true, // デフォルトのエクスポートがないモジュールからのデフォルトのインポートを許可します。これはコードの出力には影響しません。型検査だけです。
+    "esModuleInterop": true, // CommonJSモジュールとESモジュール間の相互運用性を,すべてのインポート用に名前空間オブジェクトを作成することで可能にします。「allowSyntheticDefaultImports」を暗示します。
+    "baseUrl": "./", // 非絶対モジュール名を解決するためのベースディレクトリ。
+    "paths": {
+      // 'baseUrl'に相対的な参照位置にインポートを再マップする一連のエントリ。
+      "@/*": ["ts/*"]
+    }
+  },
+  "exclude": ["node_modules"], // コンパイルから除外するファイルのリストを指定します。
+  "include": ["ts/**/*"] // コンパイルに含めるファイルと一致するグロブパターンのリストを指定します。
+}

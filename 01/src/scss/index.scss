@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import './reset';
+
+.accordion-panel {
+  height: 0;
+  overflow: hidden;
+  background: #eee;
+  transition: height 0.3s ease-out;
+}
+
+#smooth-scroll-target {
+  height: 1000px;
+  margin-top: 1000px;
+  padding: 100px;
+  background: #ccc;
+}

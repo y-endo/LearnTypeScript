@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 11
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "no-console": 1,
+    "no-var": 2,
+    "prettier": true
+  }
+}
