@@ -1,5 +1,5 @@
 class Accordion {
-  private className: { [key: string]: string };
+  readonly className: { [key: string]: string };
 
   constructor() {
     this.className = {
