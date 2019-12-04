@@ -35,14 +35,14 @@ class Accordion {
   };
 
   public open(panelId: string): void {
-    const panel: HTMLElement | null = document.querySelector('#' + panelId);
+    const panel = document.querySelector<HTMLElement>('#' + panelId);
     if (panel === null) return;
 
     panel.style.height = panel.scrollHeight + 'px';
   }
 
   public close(panelId: string): void {
-    const panel: HTMLElement | null = document.querySelector('#' + panelId);
+    const panel = document.querySelector<HTMLElement>('#' + panelId);
     if (panel === null) return;
 
     panel.style.height = '';
