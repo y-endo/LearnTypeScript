@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <module-button :greet="greetText"></module-button>
+    <p>挨拶: {{ greetText }}</p>
+    <p>挨拶した回数: {{ count }}</p>
+    <module-button :greet="greetText" @click="handleModuleButtonClick"></module-button>
   </div>
 </template>
 
@@ -16,5 +18,11 @@ import ModuleButton from './components/modules/Button.vue';
 })
 export default class App extends Vue {
   private greetText: string = 'Hello World';
+  private count: number = 0;
+
+  public handleModuleButtonClick(count: number) {
+    this.count = count;
+    this.greetText = 'こんにちは';
+  }
 }
 </script>
